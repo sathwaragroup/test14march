@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+<style type="text/css">
+    
+ /* Set the styling for the main page. */
+ 
+ html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: lightgray;
+      }
+      
+  /* Set the size, position and styling for the map. */
+      #map {
+
+        float: left;
+        height: 25%;
+        width: 25%;
+        border-radius: 20px;
+        
+      }
+      
+      
+  /* Set the size, position and styling for the street view. */
+      #sview {
+        
+        float: left;
+        height: 90%;
+        width: 90%;
+        margin-left: 80px;
+        border: 2px solid #000;
+      }
+
+
+</style>
+
+
+</head>
+<body>
+
+    <!--Pretty basic stuff here, just give the page a title. -->
+    <title>Google Map / Street View side-by-side</title>
+    
+
+    
+    <!-- Create a DIV for the map and the street view. --> 
+    <div id="map"></div>
+    <div id="sview"></div>
+  
+  <!-- And lastly, add the script to load the Google map API. 
+          Don't forget to replace the API key with your own. --> 
+          
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZTNACNv36n80XU0vWAm-GoS8D12cKA6s&callback=initialize">
+    </script>
+ <script type="text/javascript">
+     
+  /* Initialize the map, set the variable for "lmall" (Lawton Mall), provide the lat-lng (latitude-longitude), 
+    center on "lmall" and set the zoom level. */
+  
+  function initialize() {
+        var lmall = {lat:38.9074584 , lng:-77.0722249};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: lmall,
+          zoom: 14
+        });
+        
+        /* Initialize the street view, set the position to equal the variable (var) "lmall". */ 
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('sview'), {
+              position: lmall,
+              pov: {
+                  pitch: 10,
+                radius:10
+              }
+            });
+        map.setStreetView(panorama);
+      }
+      
+      
+
+ </script>
+
+</body>
+</html>

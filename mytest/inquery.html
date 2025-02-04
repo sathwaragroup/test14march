@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+<style type="text/css">
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,700,900');
+/*font Variables*/
+/*Color Variables*/
+
+ .multi_step_form {
+     background: #fff;
+     display: block;
+     overflow: hidden;
+       width: 298px;
+    height: 498px;
+}
+ .multi_step_form #msform {
+     text-align: center;
+     position: relative;
+     padding-top: 30px;
+     // min-height: 820px;
+     // max-width: 810px;
+     margin: 0 auto;
+     background: #fff;
+     z-index: 1;
+}
+//  .multi_step_form #msform .tittle {
+//   text-align: center;
+//   padding-bottom: 55px;
+// }
+//  .multi_step_form #msform .tittle h2 {
+//   font: 500 24px/35px 'Roboto', sans-serif;
+//   color: #3f4553;
+//   padding-bottom: 5px;
+// }
+//  .multi_step_form #msform .tittle p {
+//   font: 400 16px/28px 'Roboto', sans-serif;
+//   color: #5f6771;
+// }
+ .multi_step_form #msform fieldset {
+     border: 0;
+     padding: 20px 105px 0;
+     position: relative;
+     width: 100%;
+     left: 0;
+     right: 0;
+}
+ .multi_step_form #msform fieldset:not(:first-of-type) {
+     display: none;
+}
+ .multi_step_form #msform fieldset h3 {
+     font: 500 18px/20px 'Roboto', sans-serif;
+     color: #3f4553;
+}
+//  .multi_step_form #msform fieldset h6 {
+//   font: 400 15px/28px 'Roboto', sans-serif;
+//   color: #5f6771;
+//   padding-bottom: 30px;
+// }
+//  .multi_step_form #msform fieldset .intl-tel-input {
+//   display: block;
+//   background: transparent;
+//   border: 0;
+//   box-shadow: none;
+//   outline: none;
+// }
+//  .multi_step_form #msform fieldset .intl-tel-input .flag-container .selected-flag {
+//   padding: 0 20px;
+//   background: transparent;
+//   border: 0;
+//   box-shadow: none;
+//   outline: none;
+//   width: 65px;
+// }
+//  .multi_step_form #msform fieldset .intl-tel-input .flag-container .selected-flag .iti-arrow {
+//   border: 0;
+// }
+//  .multi_step_form #msform fieldset .intl-tel-input .flag-container .selected-flag .iti-arrow:after {
+//   content: "\f35f";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   font: normal normal normal 24px/7px Ionicons;
+//   color: #5f6771;
+// }
+//  .multi_step_form #msform fieldset #phone {
+//   // padding-left: 80px;
+// }
+//  .multi_step_form #msform fieldset .form-group {
+//   padding: 0 10px;
+// }
+ .multi_step_form #msform fieldset .fg_2, .multi_step_form #msform fieldset .fg_3 {
+     padding-top: 10px;
+     display: block;
+     overflow: hidden;
+}
+ .multi_step_form #msform fieldset .fg_3 {
+     padding-bottom: 70px;
+}
+ .multi_step_form #msform fieldset .form-control, .multi_step_form #msform fieldset .product_select {
+     border-radius: 3px;
+     border: 1px solid #d8e1e7;
+     padding: 0 20px;
+     height: auto;
+     font: 400 15px/48px 'Roboto', sans-serif;
+     color: #5f6771;
+     box-shadow: none;
+     outline: none;
+     width: 100%;
+}
+ .multi_step_form #msform fieldset .form-control.placeholder, .multi_step_form #msform fieldset .product_select.placeholder {
+     color: #5f6771;
+}
+ .multi_step_form #msform fieldset .form-control:-moz-placeholder, .multi_step_form #msform fieldset .product_select:-moz-placeholder {
+     color: #5f6771;
+}
+ .multi_step_form #msform fieldset .form-control::-moz-placeholder, .multi_step_form #msform fieldset .product_select::-moz-placeholder {
+     color: #5f6771;
+}
+ .multi_step_form #msform fieldset .form-control::-webkit-input-placeholder, .multi_step_form #msform fieldset .product_select::-webkit-input-placeholder {
+     color: #5f6771;
+}
+ .multi_step_form #msform fieldset .form-control:hover, .multi_step_form #msform fieldset .product_select:hover, .multi_step_form #msform fieldset .form-control:focus, .multi_step_form #msform fieldset .product_select:focus {
+     border-color: #000;
+}
+ .multi_step_form #msform fieldset .form-control:focus.placeholder, .multi_step_form #msform fieldset .product_select:focus.placeholder {
+     color: transparent;
+}
+ .multi_step_form #msform fieldset .form-control:focus:-moz-placeholder, .multi_step_form #msform fieldset .product_select:focus:-moz-placeholder {
+     color: transparent;
+}
+ .multi_step_form #msform fieldset .form-control:focus::-moz-placeholder, .multi_step_form #msform fieldset .product_select:focus::-moz-placeholder {
+     color: transparent;
+}
+ .multi_step_form #msform fieldset .form-control:focus::-webkit-input-placeholder, .multi_step_form #msform fieldset .product_select:focus::-webkit-input-placeholder {
+     color: transparent;
+}
+ .multi_step_form #msform fieldset .product_select:after {
+     display: none;
+}
+ .multi_step_form #msform fieldset .product_select:before {
+     content: "\f35f";
+     position: absolute;
+     top: 0;
+     right: 20px;
+     font: normal normal normal 24px/48px Ionicons;
+     color: #5f6771;
+}
+ .multi_step_form #msform fieldset .product_select .list {
+     width: 100%;
+}
+ .multi_step_form #msform fieldset .done_text {
+     padding-top: 40px;
+}
+ .multi_step_form #msform fieldset .done_text .don_icon {
+     height: 36px;
+     width: 36px;
+     line-height: 36px;
+     font-size: 22px;
+     margin-bottom: 10px;
+     background: #5cb85c;
+     display: inline-block;
+     border-radius: 50%;
+     color: #fff;
+     text-align: center;
+}
+ .multi_step_form #msform fieldset .done_text h6 {
+     line-height: 23px;
+}
+ .multi_step_form #msform fieldset .code_group {
+     margin-bottom: 60px;
+}
+ .multi_step_form #msform fieldset .code_group .form-control {
+     border: 0;
+     border-bottom: 1px solid #a1a7ac;
+     border-radius: 0;
+     display: inline-block;
+     width: 30px;
+     font-size: 30px;
+     color: #5f6771;
+     padding: 0;
+     margin-right: 7px;
+     text-align: center;
+     line-height: 1;
+}
+//  .multi_step_form #msform fieldset .passport {
+//   margin-top: -10px;
+//   padding-bottom: 30px;
+//   position: relative;
+// }
+//  .multi_step_form #msform fieldset .passport .don_icon {
+//   height: 36px;
+//   width: 36px;
+//   line-height: 36px;
+//   font-size: 22px;
+//   position: absolute;
+//   top: 4px;
+//   right: 0;
+//   background: #5cb85c;
+//   display: inline-block;
+//   border-radius: 50%;
+//   color: #fff;
+//   text-align: center;
+// }
+//  .multi_step_form #msform fieldset .passport h4 {
+//   font: 500 15px/23px 'Roboto', sans-serif;
+//   color: #5f6771;
+//   padding: 0;
+// }
+ .multi_step_form #msform fieldset .input-group {
+     padding-bottom: 40px;
+}
+ .multi_step_form #msform fieldset .input-group .custom-file {
+     width: 100%;
+     height: auto;
+}
+ .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label {
+     width: 168px;
+     border-radius: 5px;
+     cursor: pointer;
+     font: 700 14px/40px 'Roboto', sans-serif;
+     border: 1px solid #99a2a8;
+     text-align: center;
+     transition: all 300ms linear 0s;
+     color: #5f6771;
+}
+ .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label i {
+     font-size: 20px;
+     padding-right: 10px;
+}
+ .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:hover, .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:focus {
+     background: #5cb85c;
+     border-color: #5cb85c;
+     color: #fff;
+}
+ .multi_step_form #msform fieldset .input-group .custom-file input {
+     display: none;
+}
+ .multi_step_form #msform fieldset .file_added {
+     text-align: left;
+     padding-left: 190px;
+     padding-bottom: 60px;
+}
+ .multi_step_form #msform fieldset .file_added li {
+     font: 400 15px/28px 'Roboto', sans-serif;
+     color: #5f6771;
+}
+ .multi_step_form #msform fieldset .file_added li a {
+     color: #5cb85c;
+     font-weight: 500;
+     display: inline-block;
+     position: relative;
+     padding-left: 15px;
+}
+ .multi_step_form #msform fieldset .file_added li a i {
+     font-size: 22px;
+     padding-right: 8px;
+     position: absolute;
+     left: 0;
+     transform: rotate(20deg);
+}
+ .multi_step_form #msform #progressbar {
+     margin-bottom: 20px;
+     overflow: hidden;
+   padding:0;
+}
+ .multi_step_form #msform #progressbar li {
+     list-style-type: none;
+     color: #99a2a8;
+     font-size: 9px;
+     width: calc(100%/5);
+     float: left;
+     position: relative;
+     font: 500 13px/1 'Roboto', sans-serif;
+}
+ .multi_step_form #msform #progressbar li:nth-child(2):before {
+     content: "\f12f";
+}
+ .multi_step_form #msform #progressbar li:nth-child(3):before {
+     content: "\f457";
+}
+ .multi_step_form #msform #progressbar li:before {
+     content: "\f1fa";
+     // font: normal normal normal 30px/50px Ionicons;
+     width: 30px;
+     height: 30px;
+     line-height: 30px;
+     display: block;
+     background: #eaf0f4;
+     border-radius: 50%;
+     margin: 0 auto 10px auto;
+}
+ .multi_step_form #msform #progressbar li:after {
+     content: '';
+     width: 100%;
+     height: 10px;
+     background: #eaf0f4;
+     position: absolute;
+     left: -50%;
+     top: 11px;
+     z-index: -1;
+}
+ .multi_step_form #msform #progressbar li:last-child:after {
+     width: 150%;
+}
+ .multi_step_form #msform #progressbar li.active {
+     color: #ea4530;
+}
+ .multi_step_form #msform #progressbar li.active:before
+{
+      background: #000;
+    color: white
+}
+  .multi_step_form #msform #progressbar li.active:after {
+     background: #000;
+     color: white;
+}
+ .multi_step_form #msform .action-button {
+     background: #176db7;
+     color: white;
+     border: 0 none;
+     border-radius: 5px;
+     cursor: pointer;
+     min-width: 110px;
+     font: 700 14px/40px 'Roboto', sans-serif;
+     border: 1px solid #176db7;
+     margin: 0 5px;
+     text-transform: uppercase;
+     display: inline-block;
+   border-radius: 3px;
+}
+ .multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus {
+     background: #176db7;
+     border-color: #176db7;
+}
+ .multi_step_form #msform .previous_button {
+     background: transparent;
+     color: #000;
+     border-color: #99a2a8;
+}
+ .multi_step_form #msform .previous_button:hover, .multi_step_form #msform .previous_button:focus {
+     background: #000;
+     border-color: #577450;
+     color: #fff;
+}
+
+.form-radio {
+  position: relative;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+.form-radio label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 2rem;
+  text-align: left;
+  color: #333;
+  display: block;
+}
+.form-radio input {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+}
+
+.radio {
+  margin-bottom: 1rem;
+}
+.radio .helper {
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #999;
+}
+.radio .helper::before, .radio .helper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  -webkit-transition: -webkit-transform 0.28s ease;
+  transition: -webkit-transform 0.28s ease;
+  transition: transform 0.28s ease;
+  transition: transform 0.28s ease, -webkit-transform 0.28s ease;
+  border-radius: 50%;
+  border: 0.125rem solid #6b8f63;
+}
+.radio .helper::after {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-color: #ea4530;
+  border-color: #ea4530;
+}
+.radio label:hover .helper {
+  color: #6b8f63;
+}
+.radio input:checked ~ .helper::after {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+.radio input:checked ~ .helper::before {
+  color: #ea4530;
+}
+
+
+fieldset {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+    width: 95% !important;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+  padding: 20px 15px 15px !important;
+}
+
+
+
+
+
+
+
+.choice-box {
+  position: relative;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.form-inline > .form-group,
+.form-inline > .btn {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.form-help {
+  margin-top: 0.125rem;
+  margin-left: 0.125rem;
+  color: #b3b3b3;
+  font-size: 0.8rem;
+}
+.checkbox .form-help, .form-radio .form-help, .form-group .form-help {
+  position: absolute;
+  width: 100%;
+}
+.checkbox .form-help {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form-radio .form-help {
+  padding-top: 0.25rem;
+  margin-top: -1rem;
+}
+
+.form-group input {
+  height: 1.9rem;
+}
+.form-group textarea {
+  resize: none;
+}
+.form-group select {
+  width: 100%;
+  font-size: 1rem;
+  height: 1.6rem;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  background: none;
+  border: none;
+  line-height: 1.6;
+  box-shadow: none;
+}
+.form-group .control-label {
+  position: absolute;
+  top: 0.25rem;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+.form-group .bar {
+  position: relative;
+  border-bottom: 0.0625rem solid #999;
+  display: block;
+}
+.form-group .bar::before {
+  content: '';
+  height: 0.125rem;
+  width: 0;
+  left: 50%;
+  bottom: -0.0625rem;
+  position: absolute;
+  background: #337ab7;
+  -webkit-transition: left 0.28s ease, width 0.28s ease;
+  transition: left 0.28s ease, width 0.28s ease;
+  z-index: 2;
+}
+.form-group input,
+.form-group textarea {
+  display: block;
+  background: none;
+  padding: 0.125rem 0.125rem 0.0625rem;
+  font-size: 1rem;
+  border-width: 0;
+  border-color: transparent;
+  line-height: 1.9;
+  width: 100%;
+  color: transparent;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  box-shadow: none;
+}
+.form-group input[type="file"] {
+  line-height: 1;
+}
+.form-group input[type="file"] ~ .bar {
+  display: none;
+}
+.form-group select,
+.form-group input:focus,
+.form-group input:valid,
+.form-group input.form-file,
+.form-group input.has-value,
+.form-group textarea:focus,
+.form-group textarea:valid,
+.form-group textarea.form-file,
+.form-group textarea.has-value {
+  color: #333;
+}
+.form-group select ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group input:valid ~ .control-label,
+.form-group input.form-file ~ .control-label,
+.form-group input.has-value ~ .control-label,
+.form-group textarea:focus ~ .control-label,
+.form-group textarea:valid ~ .control-label,
+.form-group textarea.form-file ~ .control-label,
+.form-group textarea.has-value ~ .control-label {
+  font-size: 0.8rem;
+  color: gray;
+  top: -1rem;
+  left: 0;
+}
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+.form-group select:focus ~ .control-label,
+.form-group input:focus ~ .control-label,
+.form-group textarea:focus ~ .control-label {
+  color: #337ab7;
+}
+.form-group select:focus ~ .bar::before,
+.form-group input:focus ~ .bar::before,
+.form-group textarea:focus ~ .bar::before {
+  width: 100%;
+  left: 0;
+}
+
+.checkbox {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.checkbox .helper {
+  color: #999;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 1rem;
+  height: 1rem;
+  z-index: 0;
+  border: 0.125rem solid currentColor;
+  border-radius: 0.0625rem;
+  -webkit-transition: border-color 0.28s ease;
+  transition: border-color 0.28s ease;
+}
+.checkbox .helper::before, .checkbox .helper::after {
+  position: absolute;
+  height: 0;
+  width: 0.2rem;
+  background-color: #337ab7;
+  display: block;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  border-radius: 0.25rem;
+  content: '';
+  -webkit-transition: opacity 0.28s ease, height 0s linear 0.28s;
+  transition: opacity 0.28s ease, height 0s linear 0.28s;
+  opacity: 0;
+}
+.checkbox .helper::before {
+  top: 0.65rem;
+  left: 0.38rem;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  box-shadow: 0 0 0 0.0625rem #fff;
+}
+.checkbox .helper::after {
+  top: 0.3rem;
+  left: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.checkbox label:hover .helper {
+  color: #337ab7;
+}
+.checkbox input:checked ~ .helper {
+  color: #337ab7;
+}
+.checkbox input:checked ~ .helper::after, .checkbox input:checked ~ .helper::before {
+  opacity: 1;
+  -webkit-transition: height 0.28s ease;
+  transition: height 0.28s ease;
+}
+.checkbox input:checked ~ .helper::after {
+  height: 0.5rem;
+}
+.checkbox input:checked ~ .helper::before {
+  height: 1.2rem;
+  -webkit-transition-delay: 0.28s;
+          transition-delay: 0.28s;
+}
+
+.checkbox label,
+.form-radio label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  text-align: left;
+  color: #333;
+  display: block;
+}
+.checkbox input,
+.form-radio input {
+  width: auto;
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+}
+
+
+html,body{
+        height:100%;
+        }
+.bg-img {
+    background-image: url("uploads/cambridge.jpg");
+    background-position: center; 
+    background-size: cover;
+}
+ 
+</style>
+<script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+</head>
+<body >
+
+<!-- Multi step form --> 
+
+<div style="width:300px; height:600px; border:1px solid;overflow: hidden;" class="bg-img">
+  <div class="sponsor-logo" style="width: 298px;
+    height: 100px;
+    overflow: hidden;background-color: #000">
+    <div style="background-image: url(https://www.mbusa.com/etc/designs/mb-nafta/images/Mercedes_Benz__logo--desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 85%;
+                margin-top: 7px;
+    background-size: contain;"></div>
+  </div>
+<section class="multi_step_form">  
+  <form id="msform"> 
+    <!-- Tittle -->
+<!--     <div class="tittle">
+      <h2>Verification Process</h2>
+    </div> -->
+    <!-- progressbar -->
+    <h3 style="    margin-top: -15px;
+    margin-bottom: 20px;">Schedule a Test Drive</h3>
+    <ul id="progressbar">
+      <li class="active"></li>  
+      <li></li> 
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+      <h3>Personal Information</h3>
+<!--       <h6>We will send you a SMS. Input the code to verify.</h6>  -->
+      <div class="form-row"> 
+        <div class="form-group col-md-6">  
+          <input type="text" class="form-control" placeholder="First Name*"> 
+        </div>  
+        <div class="form-group col-md-6"> 
+          <input type="text" class="form-control" placeholder="Last Name*">
+        </div> 
+        <div class="form-group col-md-6"> 
+          <input type="email" class="form-control" placeholder="Email*">
+        </div> 
+      </div> 
+<!--       <div class="done_text"> 
+        <a href="#" class="don_icon"><i class="ion-android-done"></i></a> 
+        <h6>A secret code is sent to your phone. <br>Please enter it here.</h6> 
+      </div>   -->
+<!--       <div class="code_group"> 
+        <input type="text" class="form-control" placeholder="0">
+        <input type="text" class="form-control" placeholder="0">
+        <input type="text" class="form-control" placeholder="0">
+        <input type="text" class="form-control" placeholder="0">
+      </div>   -->
+<!--       <button type="button" class="action-button previous_button">Back</button> -->
+      <button type="button" class="next action-button">Continue</button>  
+    </fieldset>
+    <fieldset>
+      <h3>Vehicle Information</h3>
+      <div class="form-group choice-box">
+      <select>
+        <option>A-Class</option>
+        <option>C-Class</option>
+        <option>CLA</option>
+        <option>CLS</option>
+        <option>GLA</option>
+      </select>
+      <label for="select" class="control-label">Select Class*</label><i class="bar"></i>
+    </div>
+      
+      <div class="form-group choice-box">
+      <select>
+        <option>A 220 4MATIC Sedan</option>
+        <option>A 220 Sedan</option>
+        <option>CLA 250 4MATIC Coupe</option>
+        <option>AMG CLS 53 Coupe</option>
+        <option>GLA 250 4MATIC SUV</option>
+      </select>
+      <label for="select" class="control-label">Select Model*</label><i class="bar"></i>
+    </div>
+        
+      <button type="button" class="action-button previous previous_button">Back</button>
+      <button type="button" class="next action-button">Continue</button>  
+    </fieldset>  
+    <fieldset>
+      <h3>Select your preferred appointment date and time.</h3>
+      <div class="form-group choice-box">
+      <input id="datepicker" type="text" required="required"/>
+      <label for="input" class="control-label" style="left:0;">Preferred Date </label><i class="bar"></i>
+    </div>
+     <div class="form-group choice-box">
+      <select>
+        <option>Anytime</option>
+        <option>Daytime</option>
+        <option>Evening</option>
+      </select>
+      <label for="select" class="control-label">Preferred Time</label><i class="bar"></i>
+    </div>
+      
+      
+      <button type="button" class="action-button previous previous_button">Back</button>
+      <button type="button" class="next action-button">Continue</button> 
+    </fieldset>  
+    
+    
+    <fieldset>
+      <h3>Enter any additional comments or questions.</h3>
+      <textarea maxlength="2500" spellcheck="false" style="width:250px; height: 150px;"></textarea>
+      
+      <div class="checkbox">
+      <label>
+        <input type="checkbox" checked="checked"/><i class="helper"></i>
+                I have read and accept the
+      </label>
+    </div>
+      
+      <button type="button" class="action-button previous previous_button">Back</button> 
+      <button type="button" class="next action-button">Finish</button>
+    </fieldset>  
+    
+    <fieldset>
+      <h2>Thank You</h2>
+      <span>We have sent your request to Mercedes-Benz. You'll receive an email from this dealer shortly. In the meantime, you can build and save your ideal vehicle:</span>
+<!--       <button type="button" class="action-button previous previous_button">Back</button>  -->
+      <a href="https://www.mercedes-benz.com.vn/vi/passengercars/mercedes-benz-cars/test-drive.html#/model" target="_blank" class="action-button" style="    width: 170px;
+    margin-top: 20px;">Build This Model</a> 
+    </fieldset>  
+    
+    
+  </form>  
+</section> 
+</div>
+<!-- End Multi step form -->   
+<script type="text/javascript">
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+(function($) {
+    "use strict";  
+    
+    //* Form js
+    function verificationForm(){
+        //jQuery time
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var left, opacity, scale; //fieldset properties which we will animate
+        var animating; //flag to prevent quick multi-click glitches
+
+        $(".next").click(function () {
+            if (animating) return false;
+            animating = true;
+
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
+
+            //activate next step on progressbar using the index of next_fs
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({
+                opacity: 0
+            }, {
+                step: function (now, mx) {
+                    //as the opacity of current_fs reduces to 0 - stored in "now"
+                    //1. scale current_fs down to 80%
+                    scale = 1 - (1 - now) * 0.2;
+                    //2. bring next_fs from the right(50%)
+                    left = (now * 50) + "%";
+                    //3. increase opacity of next_fs to 1 as it moves in
+                    opacity = 1 - now;
+                    current_fs.css({
+                        'transform': 'scale(' + scale + ')',
+                        'position': 'absolute'
+                    });
+                    next_fs.css({
+                        'left': left,
+                        'opacity': opacity
+                    });
+                },
+                duration: 800,
+                complete: function () {
+                    current_fs.hide();
+                    animating = false;
+                },
+                //this comes from the custom easing plugin
+                easing: 'easeInOutBack'
+            });
+        });
+
+        $(".previous").click(function () {
+            if (animating) return false;
+            animating = true;
+
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
+
+            //de-activate current step on progressbar
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+            //show the previous fieldset
+            previous_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({
+                opacity: 0
+            }, {
+                step: function (now, mx) {
+                    //as the opacity of current_fs reduces to 0 - stored in "now"
+                    //1. scale previous_fs from 80% to 100%
+                    scale = 0.8 + (1 - now) * 0.2;
+                    //2. take current_fs to the right(50%) - from 0%
+                    left = ((1 - now) * 50) + "%";
+                    //3. increase opacity of previous_fs to 1 as it moves in
+                    opacity = 1 - now;
+                    current_fs.css({
+                        'left': left
+                    });
+                    previous_fs.css({
+                        'transform': 'scale(' + scale + ')',
+                        'opacity': opacity
+                    });
+                },
+                duration: 800,
+                complete: function () {
+                    current_fs.hide();
+                    animating = false;
+                },
+                //this comes from the custom easing plugin
+                easing: 'easeInOutBack'
+            });
+        });
+
+        $(".submit").click(function () {
+            return false;
+        })
+    }; 
+    
+    //* Add Phone no select
+    function phoneNoselect(){
+        if ( $('#msform').length ){   
+            $("#phone").intlTelInput(); 
+            $("#phone").intlTelInput("setNumber", "+880"); 
+        };
+    }; 
+    //* Select js
+    function nice_Select(){
+        if ( $('.product_select').length ){ 
+            $('select').niceSelect();
+        };
+    }; 
+    /*Function Calls*/  
+    verificationForm ();
+    // phoneNoselect ();
+    // nice_Select ();
+})(jQuery); 
+
+</script>
+</body>
+</html>

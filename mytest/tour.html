@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps Street View - Get Latitude and Longitude</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZTNACNv36n80XU0vWAm-GoS8D12cKA6s&libraries=places&callback=initMap" async defer></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        #search-box {
+            width: 300px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Click on the Street View to Get Latitude and Longitude</h1>
+
+<!-- Search Box for Location -->
+<input id="search-box" class="controls" type="text" placeholder="Search for a place">
+
+<div id="map"></div>
+<button onclick="getLatLong()">Get Latitude and Longitude</button>
+
+<script>
+    var map, streetViewPanorama, lat, lng, searchBox;
+
+    // Initialize the Google Map and Street View
+    function initMap() {
+        // Create the map centered at a default location (e.g., New York)
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 40.730610, lng: -73.935242}, // Default center (New York)
+            zoom: 15
+        });
+
+        // Create the Street View panorama and link it to the map
+        streetViewPanorama = new google.maps.StreetViewPanorama(document.getElementById('map'), {
+            position: {lat: 40.730610, lng: -73.935242}, // Default starting point
+            pov: {heading: 165, pitch: 0}, // Default viewing angle
+            zoom: 1
+        });
+
+        map.setStreetView(streetViewPanorama);
+
+        // Create a search box and link it to the map
+        searchBox = new google.maps.places.SearchBox(document.getElementById('search-box'));
+
+        // Listen for the event when the user selects a place from the search results
+        searchBox.addListener('places_changed', function() {
+            var places = searchBox.getPlaces();
+            if (places.length == 0) return;
+
+            // Get the location of the first result
+            var place = places[0];
+            map.setCenter(place.geometry.location);
+            streetViewPanorama.setPosition(place.geometry.location); // Set Street View to the selected place
+        });
+
+        // Restrict search results to the map area (optional)
+        map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+        });
+
+        // Add listener to update lat/lng when user clicks on Street View
+        google.maps.event.addListener(streetViewPanorama, 'position_changed', function() {
+            lat = streetViewPanorama.getPosition().lat();
+            lng = streetViewPanorama.getPosition().lng();
+        });
+    }
+
+    // Function to get and alert the latitude and longitude of the current Street View position
+    function getLatLong() {
+        if (lat && lng) {
+            alert("Latitude: " + lat + "\nLongitude: " + lng);
+        } else {
+            alert("Please click on the map to select a location.");
+        }
+    }
+</script>
+
+</body>
+</html>
